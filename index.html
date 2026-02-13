@@ -1,11 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jafrul Amin | Software Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+  <header class="header">
+    <div class="header-content">
+      <img class="headshot" src="assets/headshot.jpg" alt="Jafrul Amin" />
+      <div class="header-text">
+        <h1 class="name">Jafrul Amin</h1>
+        <p class="role">Hunter College (CUNY) — B.A. Computer Science</p>
+        <p class="summary">Focus in Mathematics</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <aside class="sidebar">
+        <section class="section" id="skills">
+          <h2 class="section-title">Skills</h2>
+          
+          <h3 class="subsection-title">Frontend</h3>
+          <ul class="list">
+            <li>React</li>
+            <li>Next.js</li>
+            <li>TypeScript</li>
+            <li>HTML/CSS</li>
+            <li>Tailwind</li>
+          </ul>
+
+          <h3 class="subsection-title">Backend</h3>
+          <ul class="list">
+            <li>Node.js</li>
+            <li>REST APIs</li>
+            <li>SQL</li>
+            <li>PostgreSQL</li>
+          </ul>
+
+          <h3 class="subsection-title">Tools</h3>
+          <ul class="list">
+            <li>Git/GitHub</li>
+            <li>Docker</li>
+            <li>CI/CD</li>
+            <li>Cloudflare Workers/Pages</li>
+          </ul>
+        </section>
+
+        <section class="section" id="education">
+          <h2 class="section-title">Education</h2>
+          <p class="education-institution"><strong>Hunter College (CUNY)</strong> — B.A. Computer Science</p>
+          <p class="education-focus">Focus in Mathematics</p>
+          
+          <h3 class="subsection-title">Coursework</h3>
+          <table class="coursework-table">
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Data Structures & Algorithms</td>
+                <td>Core CS</td>
+              </tr>
+              <tr>
+                <td>Discrete Structures</td>
+                <td>Core CS</td>
+              </tr>
+              <tr>
+                <td>Operating Systems</td>
+                <td>Core CS</td>
+              </tr>
+              <tr>
+                <td>Database Fundamentals</td>
+                <td>Core CS</td>
+              </tr>
+              <tr>
+                <td>Computer Architecture</td>
+                <td>Core CS</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </aside>
+
+      <div class="content">
+        <section class="section" id="experience">
+          <h2 class="section-title">Experience</h2>
+
+          <article class="entry">
+            <div class="entry-header">
+              <h3 class="entry-title">NYC DOT — Project Management Intern</h3>
+              <span class="entry-date">Aug 2025 – Present</span>
+            </div>
+            <ul class="entry-list">
+              <li>Built a Unity (C#) simulation for truck blind spots using raycasting, colliders, and camera rigs.</li>
+              <li>Implemented and debugged gameplay logic (camera switching, collisions, triggers, stability).</li>
+              <li>Worked in a team codebase and fixed integration issues to keep builds reliable.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
+              <h3 class="entry-title">CUNY Tech Prep — Fellow (Software/Web Development)</h3>
+              <span class="entry-date">Jul 2025 – Present</span>
+            </div>
+            <ul class="entry-list">
+              <li>Selected for a competitive fellowship focused on full-stack development projects.</li>
+              <li>Practiced industry workflows: Git, Agile, testing, and shipping features in teams.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section" id="projects">
+          <h2 class="section-title">Projects</h2>
+
+          <article class="entry">
+            <div class="entry-header">
+              <h3 class="entry-title">Webhook Replay Studio</h3>
+              <span class="entry-date">Dec 2025</span>
+            </div>
+            <p class="entry-description">
+              Privacy-first webhook debugging tool for capturing, sanitizing, replaying, and comparing webhook payloads.
+            </p>
+            <ul class="entry-list">
+              <li>Capture → Inspect → Sanitize → Replay workflow with attempt history and export options.</li>
+              <li>Focused on safe-sharing and clean UI for developer debugging.</li>
+              <li>Built with Cloudflare Workers/Pages (and storage as needed).</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
+              <h3 class="entry-title">Expense Tracker</h3>
+              <span class="entry-date">Dec 2025</span>
+            </div>
+            <p class="entry-description">
+              Full-stack expense tracker with authentication and per-user data isolation.
+            </p>
+            <ul class="entry-list">
+              <li>Next.js + TypeScript + Tailwind UI with CRUD for expenses and summaries.</li>
+              <li>Postgres-backed storage with clean server-side logic.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Highlights</h2>
+          <ul class="entry-list">
+            <li>Strong with React + TypeScript component structure and API-driven UI.</li>
+            <li>Comfortable building full-stack apps (frontend + backend + database).</li>
+            <li>Used to team workflows: Git branches, PRs, debugging, and iteration.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
