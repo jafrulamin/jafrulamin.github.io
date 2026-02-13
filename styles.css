@@ -259,15 +259,20 @@ body {
   font-weight: bold;
 }
 
-
+/* Specificity Conflict Example */
+/* Element selector: specificity = 0,0,0,1 (1 element) */
 li {
   color: #333333;
 }
 
+/* Class selector: specificity = 0,0,1,1 (1 class + 1 element) */
 .list li {
   color: #4a4a4a;
 }
 
+/* ID selector: specificity = 0,1,0,1 (1 ID + 1 element) */
+/* This rule wins because ID has higher specificity than class */
+/* Specificity score: 0,1,0,1 > 0,0,1,1 > 0,0,0,1 */
 #skills .list li {
   color: #2a5a8a;
 }
@@ -330,4 +335,19 @@ li {
   .section-title {
     font-size: 20px;
   }
+}
+
+/* Footer */
+.footer {
+  background-color: #a3cde1;
+  border-top: 1px solid #e0e0e0;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer p {
+  color: #666666;
+  font-size: 14px;
+  margin: 0;
 }

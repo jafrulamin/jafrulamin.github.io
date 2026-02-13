@@ -45,10 +45,10 @@ The actual HTTP request path is: `GET / HTTP/1.1` sent to GitHub's servers, whic
 ## 3. AI Attribution
 
 **Exact Prompt Used:**
-"You are Cursor. Update my GitHub Pages portfolio to a clean, resume-style layout (NOT messy), using only plain HTML + CSS (no frameworks, no JS)."
+"You are Cursor. Update my GitHub Pages portfolio to a clean, resume-style layout, using only plain HTML + CSS (no frameworks, no JS)."
 
 **Logic Error AI Made:**
-The AI initially added a `<nav>` element with navigation links in the header to meet the assignment requirement for semantic HTML tags. However, when the user later requested to remove the navigation buttons for design reasons, the AI removed the `<nav>` element entirely. This created a problem because the assignment requirements specifically state that semantic HTML must include `<nav>`. The AI failed to recognize that removing the navigation would cause the project to fail the semantic HTML requirement, even if the navigation wasn't visually needed for the design.
+I asked the AI to add a `<nav>` element with navigation links in the header to meet the assignment requirement for semantic HTML tags. However, when I later requested to remove the navigation buttons for design reasons, the AI removed the `<nav>` element entirely. This created a problem because the assignment requirements specifically state that semantic HTML must include `<nav>`. The AI failed to recognize that removing the navigation would cause the project to fail the semantic HTML requirement, even if the navigation wasn't visually needed for the design.
 
 **How I Fixed It:**
-I need to re-add the `<nav>` element to the HTML structure to satisfy the assignment requirement for semantic HTML tags, ensuring the project meets all criteria even if the navigation isn't prominently displayed in the final design.
+I re-added the `<nav>` element to the HTML structure to satisfy the assignment requirement for semantic HTML tags, ensuring the project meets all criteria even if the navigation isn't prominently displayed in the final design.
