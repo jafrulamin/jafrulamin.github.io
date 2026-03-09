@@ -60,11 +60,23 @@ body {
   max-width: 600px;
 }
 
-/* Navigation */
+/* Navigation — Flexbox: brand left, links right */
 .nav {
   border-top: 1px solid #e0e0e0;
-  padding-top: 16px;
   margin-top: 24px;
+  padding: 12px 24px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 .nav-list {
@@ -73,7 +85,6 @@ body {
   margin: 0;
   display: flex;
   gap: 24px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -202,7 +213,7 @@ body {
   margin-bottom: 16px;
 }
 
-/* Entries (Experience, Projects) */
+/* Entries (Experience) */
 .entry {
   margin-bottom: 28px;
 }
@@ -259,25 +270,70 @@ body {
   font-weight: bold;
 }
 
-/* Specificity Conflict Example */
-/* Element selector: specificity = 0,0,0,1 (1 element) */
+/* Projects Grid — CSS Grid with 3+ columns on desktop */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.project-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-body {
+  padding: 16px;
+}
+
+/* Specificity Conflict (HW1 carry-over) */
+/* Element selector: 0,0,1 */
 li {
   color: #333333;
 }
 
-/* Class selector: specificity = 0,0,1,1 (1 class + 1 element) */
+/* Class selector: 0,1,1 (1 class + 1 element) — wins over li alone */
 .list li {
   color: #4a4a4a;
 }
 
-/* ID selector: specificity = 0,1,0,1 (1 ID + 1 element) */
-/* This rule wins because ID has higher specificity than class */
-/* Specificity score: 0,1,0,1 > 0,0,1,1 > 0,0,0,1 */
+/* ID selector: 1,0,1 (1 ID + 1 element) — most specific, wins over .list li */
+/* Specificity scores: 1,0,1 > 0,1,1 > 0,0,1 */
 #skills .list li {
   color: #2a5a8a;
 }
 
-@media (min-width: 768px) {
+/* Specificity Conflict (HW2 addition — project card title) */
+/* Element selector: 0,0,1 */
+h3 {
+  color: #1a1a1a;
+}
+
+/* Class selector: 0,1,0 — wins over h3 element selector */
+/* Specificity: 0,1,0 > 0,0,1 */
+.project-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2a5a8a;
+  margin-bottom: 8px;
+}
+
+/* ID + class selector: 1,1,0 — most specific, wins over .project-title */
+/* Specificity: 1,1,0 > 0,1,0 > 0,0,1 */
+#featured-project .project-title {
+  color: #0a2a5a;
+}
+
+@media (min-width: 769px) {
   .container {
     grid-template-columns: 280px 1fr;
     gap: 48px;
@@ -301,9 +357,14 @@ li {
     white-space: nowrap;
     margin-left: 16px;
   }
+
+  /* 3-column grid on desktop */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header-content {
     flex-direction: column;
     align-items: center;
@@ -334,6 +395,29 @@ li {
 
   .section-title {
     font-size: 20px;
+  }
+
+  /* Nav stacks vertically on mobile */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .nav-list a {
+    display: block;
+    width: 100%;
+  }
+
+  /* Projects grid becomes 1 column on mobile */
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 

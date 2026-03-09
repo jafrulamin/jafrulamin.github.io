@@ -17,6 +17,7 @@
       </div>
     </div>
     <nav class="nav">
+      <span class="nav-brand">Jafrul Amin</span>
       <ul class="nav-list">
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
@@ -31,7 +32,7 @@
       <aside class="sidebar">
         <section class="section" id="skills">
           <h2 class="section-title">Skills</h2>
-          
+
           <h3 class="subsection-title">Frontend</h3>
           <ul class="list">
             <li>React</li>
@@ -62,7 +63,7 @@
           <h2 class="section-title">Education</h2>
           <p class="education-institution"><strong>Hunter College (CUNY)</strong> — B.A. Computer Science</p>
           <p class="education-focus">Focus in Mathematics</p>
-          
+
           <h3 class="subsection-title">Coursework</h3>
           <table class="coursework-table">
             <thead>
@@ -128,34 +129,31 @@
         <section class="section" id="projects">
           <h2 class="section-title">Projects</h2>
 
-          <article class="entry">
-            <div class="entry-header">
-              <h3 class="entry-title">Webhook Replay Studio</h3>
-              <span class="entry-date">Dec 2025</span>
-            </div>
-            <p class="entry-description">
-              Privacy-first webhook debugging tool for capturing, sanitizing, replaying, and comparing webhook payloads.
-            </p>
-            <ul class="entry-list">
-              <li>Capture → Inspect → Sanitize → Replay workflow with attempt history and export options.</li>
-              <li>Focused on safe-sharing and clean UI for developer debugging.</li>
-              <li>Built with Cloudflare Workers/Pages (and storage as needed).</li>
-            </ul>
-          </article>
+          <div class="projects-grid">
+            <article class="project-card" id="featured-project">
+              <img class="project-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='140'%3E%3Crect width='400' height='140' fill='%234a7fb5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='14' font-family='sans-serif'%3EWebhook Replay Studio%3C/text%3E%3C/svg%3E" alt="Webhook Replay Studio" />
+              <div class="project-card-body">
+                <h3 class="project-title">Webhook Replay Studio</h3>
+                <p class="entry-description">Privacy-first webhook debugging tool. Capture → Inspect → Sanitize → Replay workflow built with Cloudflare Workers/Pages.</p>
+              </div>
+            </article>
 
-          <article class="entry">
-            <div class="entry-header">
-              <h3 class="entry-title">Expense Tracker</h3>
-              <span class="entry-date">Dec 2025</span>
-            </div>
-            <p class="entry-description">
-              Full-stack expense tracker with authentication and per-user data isolation.
-            </p>
-            <ul class="entry-list">
-              <li>Next.js + TypeScript + Tailwind UI with CRUD for expenses and summaries.</li>
-              <li>Postgres-backed storage with clean server-side logic.</li>
-            </ul>
-          </article>
+            <article class="project-card">
+              <img class="project-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='140'%3E%3Crect width='400' height='140' fill='%235a9a7a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='14' font-family='sans-serif'%3EExpense Tracker%3C/text%3E%3C/svg%3E" alt="Expense Tracker" />
+              <div class="project-card-body">
+                <h3 class="project-title">Expense Tracker</h3>
+                <p class="entry-description">Full-stack expense tracker with authentication and per-user data isolation. Next.js + TypeScript + Tailwind + PostgreSQL.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img class="project-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='140'%3E%3Crect width='400' height='140' fill='%23856ab5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='14' font-family='sans-serif'%3EClassConnect%3C/text%3E%3C/svg%3E" alt="ClassConnect" />
+              <div class="project-card-body">
+                <h3 class="project-title">ClassConnect</h3>
+                <p class="entry-description">Web app for CUNY students that auto-creates a group chat for every course. CUNY email auth, real-time messaging, course browser, and polls. Built with Next.js, TypeScript, Tailwind, and Firebase.</p>
+              </div>
+            </article>
+          </div>
         </section>
 
         <section class="section">
